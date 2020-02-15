@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ch" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>登录</title>
+    <style>
+        .center{
+            border:2px solid #eeeeee;
+            width: 300px;
+            height: 400px;
+            border-radius: 10px;
+            margin: 10px auto;
+        }
+        table{
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+<div class="center">
+    <form action="/demo/oauth2/login" method="post">
+        <input type="hidden" name="appid"  th:value="${session.appid}"/>
+        <input type="hidden" name="redirect_uri" th:value="${session.redirect_uri}"/>
+        <table>
+            <tr>
+                <td>用户名:</td>
+                <td><input type="text" name="usercode"  value="123"/></td>
+            </tr>
+            <tr>
+                <td>密码:</td>
+                <td><input type="password" name="password" value="123"/></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="登录"/>
+                </td>
+            </tr>
+        </table>
+        <br>
+    </form>
+</div>
+</body>
+</html>

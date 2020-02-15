@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>授权平台</title>
+</head>
+<body>
+<h3>授权页面</h3>
+<h4 th:text="'是否确认给'+${session.appid}+'授权,确认后跳转到'+${session.redirect_uri}"></h4>
+<a href="/demo/oauth2/ackAuth">确认授权</a>
+</body>
+</html>
